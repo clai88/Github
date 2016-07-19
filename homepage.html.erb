@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/pretty_colors.css" media="screen" title="no title" charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Welcome guys!</h1>
+    <p>
+      Please enter a github username! user
+    </p>
+    <!-- <p>The user: <%= user %>'s repos are:  <%= repos %></p> -->
+
+    <form action="/get_repos" method="post">
+      <input type="text" name="name" value="" placeholder="github_username">
+      <input type="submit" name="submit_button" value="Go">
+    </form>
+    <img src="https://pbs.twimg.com/profile_images/676789382699855872/ygfmwj3s.jpg"
+    style="width:500;height:349;" />
+
+  </body>
+</html>
