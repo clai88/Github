@@ -1,9 +1,25 @@
 h1{
-  color: rgb(81, 97, 30);
+  color: rgb(64, 80, 11);
+  font-size: 47px;
 }
 
 body{
-  color: orange;
+
   text-align: center;
-  background-color:  rgb(117, 143, 15);
+  background-color: rgb(117, 143, 15);
+}
+
+p{
+  color: rgb(14, 90, 110);
+}
+
+table{
+  border: 10px outset rgb(201, 52, 115);
+  text-align: center;
+  width:40%
+  margin: 30% 30%;
+}
+
+#repo_name{
+  color: rgb(244, 168, 195);
 }

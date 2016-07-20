@@ -13,9 +13,11 @@ class App < Sinatra::Base
 
   post "/get_repos" do
     user = params["name"]
-    repos = Client.new(user).print_repos
+    repos = Client.new(user).retrieve_repos
 
-    ERB.new(File.read("./homepage.html.erb")).result(binding)
+    picture = Client.new(user).retrieve_picture
+
+    ERB.new(File.read("./displayrepos.html.erb")).result(binding)
   end
 
   run! if app_file == $PROGRAM_NAME

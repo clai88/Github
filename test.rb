@@ -21,4 +21,5 @@ class GithubTest < Minitest::Test
     assert_equal ["bob_test", "Close-Your-Issues", "Currency", "Employee-Reviews", "Employee-Reviews-w-Database", "Github-Profile", "Hangman", "Koan-Practice", "Numbers-Guessing-Game", "practice-repo", "RailsJune2016", "Sinatra", "Weather-API"], c.print_repos
 
   end
+
 end
