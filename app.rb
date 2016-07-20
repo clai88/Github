@@ -14,8 +14,8 @@ class App < Sinatra::Base
   post "/get_repos" do
     user = params["name"]
     repos = Client.new(user).retrieve_repos
-
     picture = Client.new(user).retrieve_picture
+    repos_url = Client.new(user).retrieve_repo_url
 
     ERB.new(File.read("./displayrepos.html.erb")).result(binding)
   end

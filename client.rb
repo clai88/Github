@@ -27,16 +27,18 @@ class Client
     result = get_user_repo
     repo_name = retrieve_repos
     repo_urls = []
-  end
-
-
-    def retrieve_picture
-      result = get_user_repo
-      result[0]["owner"]["avatar_url"]
+    repo_name.each do |repo|
+      url = "https://github.com/#{@user}/#{repo}"
+      repo_urls.push(url)
     end
-
-
+    p repo_urls
   end
 
-  # c= Client.new("eadouglas10")
-  # c.print_repos
+  def retrieve_picture
+    result = get_user_repo
+    result[0]["owner"]["avatar_url"]
+  end
+end
+
+c= Client.new("eadouglas10")
+c.retrieve_repo_url

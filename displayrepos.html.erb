@@ -12,15 +12,14 @@
       <th> Repos</th>
 
     </tr>
-
-    <% repos.each do |repo| %>
+    <%= i=0 %>
+    <% repos_url.each do |url| %>
     <tr>
-      <td id="repo_name"> <%= repo %>  </td>
+      <td><a target="_blank" href= <%= url %> > <%= repos[i] %> </a>  </td>
     </tr>
+    <%= i+=1 %>
     <%end%>
   </table>
-
-
 
   <form action="/get_repos" method="post">
     <input type="text" name="name" value="" placeholder="github_username">
